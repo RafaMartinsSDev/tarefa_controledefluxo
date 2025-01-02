@@ -16,19 +16,24 @@ public class Media {
         System.out.println("Nota total");
         int numero5 = numero1 + numero2 + numero3 + numero4;
         System.out.println(numero5);
-    }
-
-    {
-        Scanner s = new Scanner(System.in);
+        int numero6 = 4;
+        numero5 /= numero6;
         System.out.println("Média do Período");
-        int result = s.nextInt();
+        System.out.println(numero5);
 
-        if (result <= 5) {
-            System.out.println("Reprovado");
-        } else if (result <= 7) {
-            System.out.println("Recuperação");
+
+        String numSt = getNum(numero5);
+        System.out.println(numSt);
+
+    }
+        public static String getNum(int numero5) {
+
+        if (numero5 >= 0 && numero5 <= 5) {
+            return "Reprovado";
+        } else if (numero5 >= 6 && numero5 <= 7) {
+            return "Recuperação";
         } else {
-            System.out.println("Aprovado");
+            return "Aprovado";
         }
     }
 
